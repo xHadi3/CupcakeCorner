@@ -11,6 +11,8 @@
 		830C98AF2D58E8F5009C7A0E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830C98AE2D58E8F5009C7A0E /* ContentView.swift */; };
 		830C98B12D58E8F6009C7A0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 830C98B02D58E8F6009C7A0E /* Assets.xcassets */; };
 		830C98B42D58E8F6009C7A0E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 830C98B32D58E8F6009C7A0E /* Preview Assets.xcassets */; };
+		830C98BB2D5A430E009C7A0E /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830C98BA2D5A430E009C7A0E /* Order.swift */; };
+		830C98BD2D5A49EC009C7A0E /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830C98BC2D5A49EC009C7A0E /* AddressView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		830C98AE2D58E8F5009C7A0E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		830C98B02D58E8F6009C7A0E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		830C98B32D58E8F6009C7A0E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		830C98BA2D5A430E009C7A0E /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		830C98BC2D5A49EC009C7A0E /* AddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,8 @@
 			children = (
 				830C98AC2D58E8F5009C7A0E /* CupcakeCornerApp.swift */,
 				830C98AE2D58E8F5009C7A0E /* ContentView.swift */,
+				830C98BA2D5A430E009C7A0E /* Order.swift */,
+				830C98BC2D5A49EC009C7A0E /* AddressView.swift */,
 				830C98B02D58E8F6009C7A0E /* Assets.xcassets */,
 				830C98B22D58E8F6009C7A0E /* Preview Content */,
 			);
@@ -137,6 +143,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				830C98BB2D5A430E009C7A0E /* Order.swift in Sources */,
+				830C98BD2D5A49EC009C7A0E /* AddressView.swift in Sources */,
 				830C98AF2D58E8F5009C7A0E /* ContentView.swift in Sources */,
 				830C98AD2D58E8F5009C7A0E /* CupcakeCornerApp.swift in Sources */,
 			);
