@@ -8,7 +8,21 @@
 import Foundation
 
 @Observable
-class Order{
+class Order: Codable{
+    
+    enum CodingKeys: String, CodingKey {
+        case _type = "type"
+        case _quantity = "quantity"
+        case _specialRequestEnabled = "specialRequestEnabled"
+        case _extraFrosting = "extraFrosting"
+        case _addSprinkles = "addSprinkles"
+        case _name = "name"
+        case _city = "city"
+        case _streetAddress = "streetAddress"
+        case _zip = "zip"
+    }
+    
+    
     static let types = ["Vanilla", "Strawberry", "Chocolate", "Rainbow"]
     
     var type = 0
@@ -18,20 +32,20 @@ class Order{
         didSet{
             if specialRequestEnabled == false{
                 extraFrosting = false
-                addSprinkes = false
+                addSprinkles = false
             }
         }
     }
     var extraFrosting = false
-    var addSprinkes = false
+    var addSprinkles = false
     
     var name = ""
-    var streetAdress = ""
-    var city = "" 
+    var streetAddress = ""
+    var city = ""
     var zip = ""
     
     var hasValidAddress:Bool{
-        if name.isEmpty || streetAdress.isEmpty || city.isEmpty || zip.isEmpty{
+        if name.isEmpty || streetAddress.isEmpty || city.isEmpty || zip.isEmpty{
             return false
         }
         return true
@@ -49,7 +63,7 @@ class Order{
         
         //$0.5 cake for sprinkles
         
-        if addSprinkes{
+        if addSprinkles{
             cost += Decimal(quantity) / 2
         }
         return cost

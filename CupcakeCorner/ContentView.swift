@@ -26,7 +26,7 @@ struct ContentView: View {
                     
                     if order.specialRequestEnabled{
                         Toggle("Add extra frosting", isOn: $order.extraFrosting)
-                        Toggle("Add extra sprinkes", isOn: $order.addSprinkes)
+                        Toggle("Add extra sprinkes", isOn: $order.addSprinkles)
                     }
                 }
                 Section{
