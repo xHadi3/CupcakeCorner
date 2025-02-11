@@ -10,6 +10,7 @@ import Foundation
 @Observable
 class Order: Codable{
     
+    
     enum CodingKeys: String, CodingKey {
         case _type = "type"
         case _quantity = "quantity"
@@ -39,10 +40,48 @@ class Order: Codable{
     var extraFrosting = false
     var addSprinkles = false
     
-    var name = ""
-    var streetAddress = ""
-    var city = ""
-    var zip = ""
+    
+    var name = "" {
+        didSet{
+            UserDefaults.standard.set(name, forKey: "Name")
+            }
+        }
+    
+    var streetAddress = "" {
+          didSet {
+              UserDefaults.standard.set(streetAddress, forKey: "StreetAddress")
+          }
+      }
+      var city = "" {
+          didSet {
+              UserDefaults.standard.set(city, forKey: "City")
+          }
+      }
+      var zip = "" {
+          didSet {
+              UserDefaults.standard.set(zip, forKey: "Zip")
+          }
+      }
+
+
+    init() {
+          // Retrieve all properties from UserDefaults if available
+          if let savedName = UserDefaults.standard.string(forKey: "Name") {
+              name = savedName
+          }
+          if let savedStreetAddress = UserDefaults.standard.string(forKey: "StreetAddress") {
+              streetAddress = savedStreetAddress
+          }
+          if let savedCity = UserDefaults.standard.string(forKey: "City") {
+              city = savedCity
+          }
+          if let savedZip = UserDefaults.standard.string(forKey: "Zip") {
+              zip = savedZip
+          }
+      }
+    
+       
+    
     
     var hasValidAddress:Bool{
         if name.trimmingCharacters(in: .whitespaces).isEmpty || streetAddress.trimmingCharacters(in: .whitespaces).isEmpty || city.trimmingCharacters(in: .whitespaces).isEmpty || zip.trimmingCharacters(in: .whitespaces).isEmpty{
